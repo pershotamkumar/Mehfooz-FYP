@@ -1,0 +1,79 @@
+TrustPay Commerce — Complete Project Features
+1. Customer App (React Native + Expo)
+1. Customer registration, login and profile management
+2. Browse products by category
+3. Search, filter and sort products
+4. Product details, images, ratings and reviews
+5. Shopping cart and checkout
+6. Protected payments with funds held until order confirmation
+7. Customer wallet and transaction history
+8. Order tracking and delivery status
+9. Confirm product received and release payment
+10. Return, cancellation and refund requests
+11. Dispute and complaint management
+12. AI shopping assistant and chatbot
+13. Personalized product recommendations
+14. Product reviews and ratings
+15. Push notifications and order alerts
+16. Wishlist and saved addresses
+17. Voice-based product search
+18. AI-based product and seller risk indicators
+2. Seller / Merchant Dashboard (React Web)
+1. Seller registration and login
+2. Seller profile and store management
+3. Product listing, editing and deletion
+4. Product images, pricing and stock management
+5. Category and inventory management
+6. Order management and processing
+7. Shipping and tracking updates
+8. Merchant wallet and transaction history
+9. View held, available and pending funds
+10. Receive payment after customer confirmation
+11. Refund and dispute handling
+12. Sales analytics and revenue reports
+13. Customer reviews and ratings
+14. Sales and order notifications
+15. Seller verification and document submission
+16. Platform fees and settlement reports
+17. AI-based return-to-origin (RTO) risk prediction
+18. Integration with existing e-commerce stores via API
+3. Admin Dashboard (React Web)
+1. Admin authentication and role-based access
+2. Customer management
+3. Seller management and verification
+4. Product and category management
+5. Orders and delivery monitoring
+6. Platform wallet and transaction ledger
+7. Held-fund and payment-release monitoring
+8. Refund and dispute resolution
+9. Platform commission management
+10. Seller settlements and payout monitoring
+11. Fraud and suspicious-transaction detection
+12. AI-based RTO analytics
+13. Platform sales and revenue analytics
+14. User reports and complaints
+15. Notifications and announcements
+16. Audit logs and activity monitoring
+17. System settings and access permissions
+18. Dashboard reports and exports
+4. Shared Backend (Node.js + Express + MongoDB)
+- Authentication using bcryptjs and JWT
+- Role-based access: Customer, Seller and Admin
+- Product, category, cart and order APIs
+- Customer and merchant wallet records
+- Transaction ledger with held, pending and available balances
+- Secure payment-release and refund workflows
+- Order status and delivery management
+- Reviews, notifications and dispute APIs
+- AI services integration
+- Payment-provider integration
+- Existing-store integration APIs
+- Input validation, error handling and security controls
+5. Future AI Features
+- AI shopping assistant
+- Personalized recommendations
+- RTO and order-risk prediction
+- Fraud detection
+- Voice shopping assistant
+- Virtual try-on for clothing
+- Seller analytics and demand forecasting
