@@ -1,24 +1,47 @@
-import express from "express";
+
+import express from 'express';
+
 import {
   createProduct,
   getProducts,
   getMyProducts,
   getProductById,
   updateProduct,
-  deleteProduct
-} from "../controllers/product.controller.js";
-import { protect, authorize } from "../middleware/auth.middleware.js";
+  deleteProduct,
+  fetchCategories,
+} from '../controllers/product.js';
+
+import { protect } from '../utils/authMiddleware.js';
 
 const router = express.Router();
 
-// Public Routes
-router.get("/", getProducts);
-router.get("/:id", getProductById);
+// ========================================
+// PUBLIC ROUTES
+// ========================================
+
+// Get all products (supports keyword, category, page, limit)
+router.get('/', getProducts);
+
+// Get all product categories
+router.get('/categories', fetchCategories);
 
 
-router.get("/seller/my-products", protect, authorize("seller", "admin"), getMyProducts);
-router.post("/", protect, authorize("seller", "admin"), createProduct);
-router.put("/:id", protect, authorize("seller", "admin"), updateProduct);
-router.delete("/:id", protect, authorize("seller", "admin"), deleteProduct);
+// ========================================
+// PROTECTED SELLER ROUTES
+// ========================================
+
+// Get logged-in seller's products
+router.get('/my-products', protect, getMyProducts);
+
+// Create product
+router.post('/add', protect, createProduct);
+
+// Update product (owner or admin check in controller)
+router.put('/:id', protect, updateProduct);
+
+// Delete product (owner or admin check in controller)
+router.delete('/:id', protect, deleteProduct);
+// Get single product by ID
+router.get('/:id', getProductById);
 
 export default router;

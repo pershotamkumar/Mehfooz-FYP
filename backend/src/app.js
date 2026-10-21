@@ -2,8 +2,11 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
+// Import routes
+import authRoutes from "./routes/auth.js";
+import productRoutes from './routes/product.js';
 dotenv.config();
-
+ 
 const app = express();
 
 app.use(helmet());
@@ -16,5 +19,7 @@ app.get("/api/health", (req, res) => {
     message: "TrustPay API is running",
   });
 });
+app.use("/api/auth", authRoutes);
+app.use('/api/products', productRoutes);
 
 export default app;
